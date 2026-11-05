@@ -361,6 +361,22 @@
     margin: .1em 0 0;
   }
   
+  /* プロフィール共通：委員会・その他の活動を1件ずつ読みやすく表示 */
+  .profile__details dd,
+  .profile-page__details dd {
+    min-width: 0;
+  }
+
+  .profile-detail-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .profile-detail-list > li + li {
+    margin-top: .35em;
+  }
+
   .profile__more {
     position: relative;
     z-index: 2;
@@ -614,8 +630,8 @@
     }
   }
 
-  /* タブレットは人物を上段に収め、基本情報は横幅いっぱいに表示 */
-  @media (min-width: 768px) and (max-width: 999.98px) {
+  /* 追加項目が長いため、狭いPC・タブレットでは人物を上段、基本情報を横幅いっぱいに表示 */
+  @media (min-width: 768px) and (max-width: 1199.98px) {
     .profile__heading {
       align-self: end;
       margin-bottom: 1rem;
